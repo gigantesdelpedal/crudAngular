@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "crud-angular": "apps/crud-angular",
+    "crud-angular-e2e": "apps/crud-angular-e2e"
+  }
+}

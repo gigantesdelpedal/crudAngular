@@ -1,0 +1,28 @@
+{
+  "root": "apps/crud-angular-e2e",
+  "sourceRoot": "apps/crud-angular-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/crud-angular-e2e/cypress.json",
+        "devServerTarget": "crud-angular:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "crud-angular:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/crud-angular-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["crud-angular"]
+}
